@@ -1,0 +1,17 @@
+import time
+
+# Recursive Factorial
+def factorial_recursive(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial_recursive(n-1)
+
+# Time Analysis
+n = 10
+start = time.time()
+fact_rec = factorial_recursive(n)
+end = time.time()
+
+print("Recursive Factorial of", n, ":", fact_rec)
+print("Recursive Time:", end - start, "seconds")
